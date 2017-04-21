@@ -46,7 +46,7 @@
 </html>
 
 <?php
-  // １．データベースに接続する
+  // １．データベースに接続するaaa
   $dsn = 'mysql:dbname=oneline_bbs;host=localhost';
   $user = 'root';
   $password = '';
