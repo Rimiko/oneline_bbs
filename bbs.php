@@ -141,17 +141,7 @@
   <script src="assets/js/form.js"></script>
 </body>
 </html>
-<?php
-  if (!empty($_POST)) {
-  // POSTでデータが送信された時のみSQLを実行する
-  foreach ($post_datas as $post_each) {
-      echo $post_each['nickname'] . '<br>';
-      echo $post_each['comment'] . '<br>';
-      echo $post_each['created'] . '<br>';
-      echo '<hr>';
-    }
-   }
-?>
+
 
 
 
