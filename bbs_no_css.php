@@ -16,7 +16,7 @@
     $stmt->execute();
   }
   // ２．SQL文を実行する
-  // ３．データベースを切断する
+  // ３．データベースを切断するaaa
   $dbh = null;
   ?>
 <!DOCTYPE html>
