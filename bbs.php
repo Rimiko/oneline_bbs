@@ -11,6 +11,7 @@
   if (!empty($_POST)) {//ポスト送信したときのみに動くようにする
    $nickname = htmlspecialchars($_POST['nickname']);
    $comment = htmlspecialchars($_POST['comment']);
+
     $sql = 'INSERT INTO`posts`(`nickname`,`comment`,`created`) VALUES ("'.$nickname.'","'.$comment.'",now())';
     // SQLを実行
     $stmt = $dbh->prepare($sql);
@@ -101,6 +102,7 @@
       </div>
 
       <!-- 画面右側 -->
+      <!--  -->
       <div class="col-md-8 content-margin-top">
         <div class="timeline-centered">
           <article class="timeline-entry">
@@ -110,8 +112,11 @@
                       <i class="fa fa-cogs"></i>
                   </div>
                   <div class="timeline-label">
-                      <h2><a href="#">seedくん</a> <span>2016-01-20</span></h2>
-                      <p>つぶやいたコメント</p>
+                  <?php if (!empty($_POST)) {
+                      foreach ($post_datas as $post_each) {?>
+                      <h2><a href="#"><?php echo $post_each['nickname'] . '<br>'; ?></a> <span><?php echo $post_each['comment'] . '<br>'; ?></span></h2>
+                      <p><?php echo $post_each['created'] . '<br>'; ?></p> 
+                      <?php }} ?>
                   </div>
               </div>
           </article>
