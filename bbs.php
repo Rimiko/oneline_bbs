@@ -106,19 +106,20 @@
       <div class="col-md-8 content-margin-top">
         <div class="timeline-centered">
           <article class="timeline-entry">
+                  <?php if (!empty($_POST)) {
+                      foreach ($post_datas as $post_each) {?>
               <div class="timeline-entry-inner">
                   <div class="timeline-icon bg-success">
                       <i class="entypo-feather"></i>
                       <i class="fa fa-cogs"></i>
                   </div>
+
                   <div class="timeline-label">
-                  <?php if (!empty($_POST)) {
-                      foreach ($post_datas as $post_each) {?>
                       <h2><a href="#"><?php echo $post_each['nickname'] . '<br>'; ?></a> <span><?php echo $post_each['comment'] . '<br>'; ?></span></h2>
                       <p><?php echo $post_each['created'] . '<br>'; ?></p> 
-                      <?php }} ?>
                   </div>
               </div>
+              <?php }} ?>
           </article>
 
           <article class="timeline-entry begin">
