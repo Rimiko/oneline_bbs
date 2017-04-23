@@ -1,7 +1,19 @@
 body {
   margin-top: 20px;
-}
 
+}
+.image1 {
+  display: inline-block;
+  transform: rotate(5deg);
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.image2 {
+  display: inline-block;
+  transform: rotate(-10deg);
+  margin-top: 100px;
+
+}
 
 .content-margin-top {
   margin-top: 80px;

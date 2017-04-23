@@ -43,8 +43,8 @@
   <title>CEBU BILLBOARD</title>
 
   <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/timeline.css">
-  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/form.css">
@@ -63,7 +63,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#page-top"><span class="strong-title"><i class="fa fa-linux"></i> <strong>Oneline bbs</strong></span></a>
+              <a class="navbar-brand" href="#page-top"><span class="strong-title"> <strong>Oneline bbs </strong><i class="fa fa-commenting" aria-hidden="true"></i></span></a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -102,10 +102,11 @@
           <button type="submit" class="btn btn-primary col-xs-12" disabled>mutter</button>
         </form>
       </div>
-      <!-- 画面左側下 -->
-      <div class="col-md-4 content-margin-bottom">
-         
-      </div>
+      <!-- 画像 -->
+              <div class="image1">
+        <a href="#"><img src="assets/img/kame.jpeg" alt=""></a></div>
+        <div class="image2">
+        <a href="#"><img src="assets/img/yuhi.jpeg" alt=""></a></div>
 
       <!-- 画面右側 -->
       <!--  -->
@@ -117,7 +118,7 @@
               <div class="timeline-entry-inner">
                   <div class="timeline-icon bg-success">
                       <i class="entypo-feather"></i>
-                      <i class="fa fa-cogs"></i>
+                      <i class="fa fa-registered" aria-hidden="true"></i>
                   </div>
 
                   <div class="timeline-label">
