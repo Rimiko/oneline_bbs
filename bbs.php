@@ -40,14 +40,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>セブ掲示版</title>
+  <title>CEBU BILLBOARD</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/timeline.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/form.css">
-  <link rel="stylesheet" href="assets/css/timeline.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+
+
 </head>
 <body>
   <!-- ナビゲーションバー -->
@@ -61,7 +63,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#page-top"><span class="strong-title"><i class="fa fa-linux"></i> Oneline bbs</span></a>
+              <a class="navbar-brand" href="#page-top"><span class="strong-title"><i class="fa fa-linux"></i> <strong>Oneline bbs</strong></span></a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -97,8 +99,12 @@
             </div>
           </div>
           <!-- つぶやくボタン -->
-          <button type="submit" class="btn btn-primary col-xs-12" disabled>つぶやく</button>
+          <button type="submit" class="btn btn-primary col-xs-12" disabled>mutter</button>
         </form>
+      </div>
+      <!-- 画面左側下 -->
+      <div class="col-md-4 content-margin-bottom">
+         
       </div>
 
       <!-- 画面右側 -->
@@ -106,7 +112,7 @@
       <div class="col-md-8 content-margin-top">
         <div class="timeline-centered">
           <article class="timeline-entry">
-                  <?php if (!empty($_POST)) {
+                <?php if (!empty($_POST)) {
                       foreach ($post_datas as $post_each) {?>
               <div class="timeline-entry-inner">
                   <div class="timeline-icon bg-success">
@@ -119,7 +125,7 @@
                       <p><?php echo $post_each['created'] . '<br>'; ?></p> 
                   </div>
               </div>
-              <?php }} ?>
+                  <?php }} ?>
           </article>
 
           <article class="timeline-entry begin">
