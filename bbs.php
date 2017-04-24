@@ -1,10 +1,17 @@
 <?php
 
   // １．データベースに接続する
+//下3つはコメントアウトで残す
+  // $dsn = 'mysql:dbname=oneline_bbs;host=localhost';
+  // $user = 'root';
+  // $password='';
 
-  $dsn = 'mysql:dbname=oneline_bbs;host=localhost';
-  $user = 'root';
-  $password='';
+  // dbnameをロリポップのデータベース名に、hostをロリポップのサーバーに変更
+$dsn = 'mysql:dbname=LAA0854001-onelinebbs;host=  mysql122.phy.lolipop.lan';
+// userをロリポップのユーザー名に変更
+$user = 'LAA0854001';
+// passwordをロリポップのパスワードに変更
+$password = 'mrrs2932';
   $dbh = new PDO($dsn, $user, $password);
   $dbh->query('SET NAMES utf8');
     // ２．SQL文を実行する
