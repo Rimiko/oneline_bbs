@@ -16,9 +16,9 @@
     // SQLを実行
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
-
-    $sql = 'SELECT * FROM `posts` ORDER BY id DESC;';
-    // SQLを実行
+    }
+    $sql = 'SELECT * FROM `posts` ORDER BY `created` DESC;';
+    //SQLを実行
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
  
@@ -31,8 +31,6 @@
       }
      $post_datas[]=$rec; 
      }
-     var_dump($sql);
-    }
   $dbh = null;
   ?>
 
@@ -112,10 +110,9 @@
       <!--  -->
       <div class="col-md-8 content-margin-top">
         <div class="timeline-centered">
+            <?php  foreach ($post_datas as $post_each) {?>
           <article class="timeline-entry">
-                <?php if (!empty($_POST)) {
-                      foreach ($post_datas as $post_each) {?>
-              <div class="timeline-entry-inner">
+               <div class="timeline-entry-inner">
                   <div class="timeline-icon bg-success">
                       <i class="entypo-feather"></i>
                       <i class="fa fa-registered" aria-hidden="true"></i>
@@ -123,12 +120,18 @@
 
                   <div class="timeline-label">
                       <h2><a href="#"><?php echo $post_each['nickname'] . '<br>'; ?></a> <span><?php echo $post_each['comment'] . '<br>'; ?></span></h2>
-                      <p><?php echo $post_each['created'] . '<br>'; ?></p> 
+                      <?php
+                      //いったん日時をstring→DateTimeに変換
+                      $created = strtotime($post_each['created']);
+
+                      //書式を変換
+                      $created = date('Y-m-d',$created)
+                      ?>
+                      <p><?php echo $created;?></p> 
                   </div>
               </div>
-                  <?php }} ?>
           </article>
-
+          <?php } ?>
           <article class="timeline-entry begin">
               <div class="timeline-entry-inner">
                   <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
