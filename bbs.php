@@ -7,7 +7,7 @@
   // $password='';
 
   // dbnameをロリポップのデータベース名に、hostをロリポップのサーバーに変更
-$dsn = 'mysql:dbname=LAA0854001-onelinebbs;host=  mysql122.phy.lolipop.lan';
+$dsn = 'mysql:dbname=LAA0854001-onelinebbs;host=mysql122.phy.lolipop.lan';
 // userをロリポップのユーザー名に変更
 $user = 'LAA0854001';
 // passwordをロリポップのパスワードに変更
@@ -48,7 +48,7 @@ $password = 'mrrs2932';
   <title>CEBU BILLBOARD</title>
 
   <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/timeline.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
